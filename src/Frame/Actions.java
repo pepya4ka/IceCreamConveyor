@@ -98,7 +98,7 @@ public class Actions {
         //Обработчик события
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (cart.isAlive() & cart.getTemperature() > 0) {
+            if (cart.isAlive() & cart.getTemperature() > -25) {
                 cart.setTemperature(cart.getTemperature() - 5);
             }
         }

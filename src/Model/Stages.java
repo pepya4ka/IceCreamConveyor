@@ -8,7 +8,7 @@ public enum Stages {
     PASTERIZATION(70, 1, "Этап пастеризации"),
     GOMOGENIZATION(80, 8.5, "Этап гомогенизации"),
     COOLING(5, 1, "Охлаждение"),
-    FREEZING(0, 2, "Заморозка"),
+    FREEZING(-20, 2, "Заморозка"),
     COMPLETION(0, 1, "Продукт готов");
 
     // Переменные состояний

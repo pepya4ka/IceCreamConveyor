@@ -41,7 +41,7 @@ public class MainFrame {
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
         screen.setBounds(dimension.width/4, dimension.height/4, width, height);
-        screen.setTitle("So icy!");
+        screen.setTitle("Производство мороженого");
         screen.setLayout(new GridLayout(2, 2)); //выбор способа размещения элементов
 
         setupPanel(cart, ocasion);
@@ -73,7 +73,7 @@ public class MainFrame {
         buttons.put("cool_down", setupInputComponent(inputPanel, "Охлаждать", new Actions.TemperatureDown(cart)));
         buttons.put("press_up", setupInputComponent(inputPanel, "Повысить давление", new Actions.PressureUp(cart)));
         buttons.put("press_down", setupInputComponent(inputPanel, "Понизить давление", new Actions.PressureDown(cart)));
-        buttons.put("run_gen", setupInputComponent(inputPanel, "Запустить генератор", new Actions.RebootGenerator(cart)));
+//        buttons.put("run_gen", setupInputComponent(inputPanel, "Запустить генератор", new Actions.RebootGenerator(cart)));
         buttons.put("add", setupInputComponent(inputPanel, "Засыпать ингридиенты", new Actions.AddIngridients(cart)));
 
 
@@ -83,7 +83,7 @@ public class MainFrame {
 
         //Создание, добавление на панель и добавление в структуру элементов
         data.put("tips", setupInfoComponent(msgPanel, "Советы: ", "Все готово к работе"));
-        data.put("portions", setupInfoComponent(msgPanel, "Готово порций: ", "0"));
+        data.put("portions", setupInfoComponent(msgPanel, "Готово штук: ", "0"));
         buttons.put("start", setupInputComponent(msgPanel, "Начать работу", new Actions.StartAction(cart, ocasion)));
 
         //отрисовка окна

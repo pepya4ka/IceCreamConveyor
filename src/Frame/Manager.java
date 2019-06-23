@@ -19,7 +19,7 @@ public class Manager extends Thread {
 
         // Получение текстовых окон из структуры данных
         JTextArea temperature = (JTextArea) elems.get("temperature");
-        temperature.setEditable(true);
+//        temperature.setEditable(true);
         JTextArea pressure = (JTextArea) elems.get("pressure");
         JTextArea status = (JTextArea) elems.get("status");
         JTextArea tips = (JTextArea) elems.get("tips");
@@ -32,7 +32,7 @@ public class Manager extends Thread {
             pressure.setText(String.format("%.1f мПа", cart.getPressure()));
             status.setText(cart.getStatus());
             tips.setText(cart.getTip());
-            portions.setText(String.format("%d штук", cart.getPortions()));
+            portions.setText(String.format(cart.getPortions()));
         }
     }
 }

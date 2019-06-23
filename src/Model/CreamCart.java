@@ -13,6 +13,7 @@ public class CreamCart extends Thread  {
     private Stages stage = Stages.PASTERIZATION;
     private String tip = "Все готово к работе";
     private int portions = 0;
+    private int portionsInKg = 0;
     private final int STAGE_CYCLES = 1500;
 
     //Метод, запускающий поток
@@ -119,7 +120,8 @@ public class CreamCart extends Thread  {
             case FREEZING:
                 stage = Stages.COMPLETION;
                 setEnoughComponents(false);
-                portions += 1;
+                portions += 500;
+                portionsInKg += 40;
                 break;
             case COMPLETION:
                 stage = Stages.PASTERIZATION;
@@ -169,7 +171,8 @@ public class CreamCart extends Thread  {
     public String getTip() {
         return tip;
     }
-    public int getPortions() {
-        return portions;
+    public String getPortions() {
+        StringBuffer stringBuffer = new StringBuffer(portions + " (" + portionsInKg + " кг)");
+        return stringBuffer.toString();
     }
 }
